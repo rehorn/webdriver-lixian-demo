@@ -9,7 +9,11 @@ var options = {
 var account = '**@**.com';
 var passwd = '***';
 
-var link = 'magnet:?xt=**';
+if (process.argv.length < 2) {
+    process.exit(1);
+}
+
+var link = process.argv[2];
 
 var fs = require('fs');
 
